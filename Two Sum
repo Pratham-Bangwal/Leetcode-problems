@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,sum,a,b,flag=0;
+    scanf("%d",&n);
+    int list[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&list[i]);
+    }
+    scanf("%d",&sum);
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(list[i]+list[j]==sum){
+                a=i;
+                b=j;
+                flag=1;
+                break;
+            }
+        }
+    }
+    if(flag==1){
+        printf("%d %d",a,b);
+    }
+    return 0;
+}
