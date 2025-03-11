@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int top = -1;
+    int stack[top];
+    for (int i = 0;i<3;i++){
+        ++top;
+        scanf("%d %d %d",&stack[++top],&stack[top],&stack[top]);
+    }
+    for(int i =0;i<1;i++){
+        top--;
+    }
+    for (int i = 0;i<2;i++){
+        ++top;
+        scanf("%d %d",&stack[top],&stack[top]);
+    }
+    for(int i =0;i<3;i++){
+        --top;
+    }
+    printf("%d",stack[1]);
+    return 0;
+}
